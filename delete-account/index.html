@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konto löschen – BrickRock</title>
+<meta name="description" content="So löschen Sie Ihr BrickRock-Konto und die zugehörigen Spieldaten – in der App oder per E-Mail, auch ohne installierte App.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --ink: #16181e;
+    --ink-2: #3a4150;
+    --muted: #5f6675;
+    --line: #dcdfe6;
+    --line-soft: #e8eaf0;
+    --accent: #5b32d6;
+    --accent-soft: #ede8fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0e13;
+      --surface: #14171f;
+      --ink: #e7eaf1;
+      --ink-2: #c3c9d5;
+      --muted: #8a91a0;
+      --line: #272c38;
+      --line-soft: #1e222c;
+      --accent: #a68cff;
+      --accent-soft: #221b3d;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .page { max-width: 760px; margin: 0 auto; }
+
+  header {
+    padding: 56px 0 28px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+
+  .stand { color: var(--muted); font-size: 15px; margin: 0; }
+
+  h2 {
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 44px 0 12px;
+  }
+
+  h3 { font-size: 17px; margin: 26px 0 8px; }
+
+  p, ul, ol { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .contact {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 22px 0 26px;
+    text-align: center;
+  }
+  .contact .label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .contact .mail {
+    font-size: clamp(19px, 4.5vw, 24px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .contact .mail a { text-decoration: none; }
+  .contact .mail a:hover { text-decoration: underline; }
+  .contact .hint { margin: 0; font-size: 15px; color: var(--ink-2); }
+
+  .steps {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 24px 20px 44px;
+    margin: 16px 0 22px;
+  }
+  .steps li { margin-bottom: 10px; }
+  .steps li:last-child { margin-bottom: 0; }
+
+  .scroll { overflow-x: auto; margin: 16px 0 20px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 460px;
+    font-size: 15.5px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+
+  .warn {
+    border-left: 3px solid var(--accent);
+    padding: 2px 0 2px 18px;
+    margin: 20px 0;
+  }
+  .warn p { margin: 0; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 2px solid var(--ink);
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="eyebrow">BrickRock</p>
+  <h1>Konto und Daten löschen</h1>
+  <p class="stand">Stand: 22.08.2026</p>
+</header>
+
+<p>Diese Seite beschreibt, wie Sie Ihr Konto für das Spiel <strong>BrickRock</strong> und die dazu gespeicherten Spielerdaten löschen lassen können — <strong>mit oder ohne installierte App</strong>.</p>
+
+<h2 id="in-app">Löschung direkt in der App</h2>
+
+<p>Wenn BrickRock auf Ihrem Gerät installiert ist, ist das der schnellste Weg:</p>
+
+<ol class="steps">
+  <li>BrickRock öffnen.</li>
+  <li>Zu den <strong>Einstellungen</strong> wechseln.</li>
+  <li><strong>„ACCOUNT &amp; DATEN LÖSCHEN“</strong> auswählen.</li>
+  <li>Die Sicherheitsabfrage mit <strong>„ENDGÜLTIG LÖSCHEN“</strong> bestätigen.</li>
+</ol>
+
+<p>Damit werden Ihr Konto und Ihr Eintrag in den Bestenlisten entfernt. Anschliessend legt die App automatisch ein neues, leeres Profil an, damit Sie weiterspielen können — dieses neue Profil enthält keine Daten des gelöschten Kontos.</p>
+
+<div class="warn">
+  <p>Bei einem mit Google oder Apple verknüpften Konto kann die Anmeldung zu lange zurückliegen. In diesem Fall meldet die App, dass Sie sich erneut anmelden müssen. Melden Sie sich dann neu an und wiederholen Sie den Vorgang.</p>
+</div>
+
+<p><strong>Das Deinstallieren der App allein löscht Ihr Konto nicht.</strong> Es entfernt nur die auf dem Gerät gespeicherten Daten.</p>
+
+<h2 id="ohne-app">Löschung ohne installierte App</h2>
+
+<p>Sie haben die App bereits deinstalliert, kein Zugriff mehr auf das Gerät, oder die Löschung in der App funktioniert nicht? Dann fordern Sie die Löschung per E-Mail an:</p>
+
+<div class="contact">
+  <p class="label">Löschung anfordern</p>
+  <p class="mail"><a href="mailto:23patrock@googlemail.com?subject=BrickRock%20-%20Kontoloeschung">23patrock@googlemail.com</a></p>
+  <p class="hint">Betreff: „BrickRock – Kontolöschung“</p>
+</div>
+
+<h3>Was in die Anfrage gehört</h3>
+
+<p>Damit das richtige Konto gelöscht wird, brauchen wir eine Angabe, über die es eindeutig zuzuordnen ist. Am besten geeignet ist eine der folgenden:</p>
+
+<ul>
+  <li>Ihr <strong>Spielername</strong> in BrickRock (der Name, der in den Bestenlisten steht),</li>
+  <li>bei einem verknüpften Konto: die <strong>E-Mail-Adresse des Google- oder Apple-Kontos</strong>, mit dem Sie sich angemeldet haben — idealerweise schreiben Sie uns direkt von dieser Adresse aus,</li>
+  <li>oder die in der App angezeigte <strong>Nutzerkennung</strong>.</li>
+</ul>
+
+<p>Bei einem rein anonymen Konto ohne Verknüpfung gibt es keine Person, der das Konto zugeordnet ist. Ohne mindestens einen der oben genannten Anhaltspunkte lässt sich ein solches Konto nicht auffinden — bitte nennen Sie in diesem Fall Ihren Spielernamen.</p>
+
+<p>Wir bestätigen den Eingang und führen die Löschung <strong>innerhalb von 30 Tagen</strong> durch. Wenn Zweifel bestehen, ob die Anfrage tatsächlich vom Kontoinhaber stammt, fragen wir vorher nach — das schützt Sie davor, dass jemand anderes Ihr Konto löschen lässt.</p>
+
+<h2 id="was-geloescht">Was gelöscht wird</h2>
+
+<p>Mit der Löschung des Kontos werden die folgenden Daten entfernt:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Daten</th><th>Wo</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Das Benutzerkonto selbst (Anmeldung und Nutzerkennung)</td><td>Firebase Authentication</td></tr>
+    <tr><td>Anzeigename</td><td>Spielerprofil</td></tr>
+    <tr><td>Spielwährung („Coins“)</td><td>Spielerprofil</td></tr>
+    <tr><td>Bestwerte und erreichte Runden</td><td>Spielerprofil</td></tr>
+    <tr><td>Besitz und Ausrüstung von Gestaltungselementen</td><td>Spielerprofil</td></tr>
+    <tr><td>Supporter-Berechtigung</td><td>Spielerprofil</td></tr>
+    <tr><td>Einträge in allen Bestenlisten</td><td>Bestenlisten</td></tr>
+    <tr><td>Lokal auf dem Gerät gespeicherte Spielstände</td><td>Ihr Gerät</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Die Löschung ist <strong>endgültig</strong> und kann nicht rückgängig gemacht werden. Bereits erworbene Berechtigungen — insbesondere der Supporter-Status — gehen dabei verloren und werden nicht erstattet.</p>
+
+<h2 id="aufbewahrt">Was aufbewahrt wird</h2>
+
+<p>Vollständig verschwindet nicht jede Spur, und das hat rechtliche und sicherheitstechnische Gründe. Aufbewahrt werden:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Daten</th><th>Grund</th><th>Dauer</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kaufnachweise zu getätigten In-App-Käufen</td>
+      <td>gesetzliche Aufbewahrungspflichten (Handels- und Steuerrecht)</td>
+      <td>nach den gesetzlichen Fristen</td>
+    </tr>
+    <tr>
+      <td>Technische Prüfmerkmale, die verhindern, dass dieselbe Spielrunde, Werbebelohnung oder derselbe Kauf mehrfach gutgeschrieben wird</td>
+      <td>Schutz vor Missbrauch und Mehrfacheinlösung</td>
+      <td>solange ein Missbrauchsrisiko besteht</td>
+    </tr>
+    <tr>
+      <td>Server- und Zugriffsprotokolle</td>
+      <td>Betriebssicherheit und Fehlersuche</td>
+      <td>kurze, plattformseitig vorgegebene Frist; danach automatische Löschung</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Diese Daten werden nicht mehr genutzt, um Ihnen ein Spielerprofil zuzuordnen.</p>
+
+<h3>Daten bei Google und Apple</h3>
+
+<p>Ihr Kauf wurde über <strong>Google Play</strong> bzw. den <strong>Apple App Store</strong> abgewickelt. Die dort gespeicherten Zahlungs- und Transaktionsdaten liegen bei Google bzw. Apple, nicht bei uns — wir können sie nicht löschen. Wenden Sie sich dafür bitte direkt an den jeweiligen Anbieter:</p>
+
+<ul>
+  <li><a href="https://myaccount.google.com/" rel="noopener">Google-Konto verwalten</a></li>
+  <li><a href="https://privacy.apple.com/" rel="noopener">Apple-Datenschutzportal</a></li>
+</ul>
+
+<p>Ebenso bleibt Ihr Google- oder Apple-Konto selbst bestehen. Gelöscht wird ausschliesslich Ihr Konto <em>bei BrickRock</em> und die dazu gespeicherten Spielerdaten.</p>
+
+<h2 id="verantwortlicher">Verantwortlicher</h2>
+
+<p>Verantwortlich für die Verarbeitung und für die Bearbeitung Ihrer Löschanfrage:</p>
+
+<address style="font-style: normal; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 16px 20px; margin: 16px 0; line-height: 1.6;">
+  Patrick Gaida<br>
+  Bundesallee 66<br>
+  12161 Berlin<br>
+  Deutschland<br>
+  E-Mail: <a href="mailto:23patrock@googlemail.com">23patrock@googlemail.com</a>
+</address>
+
+<p>Ausführliche Informationen dazu, welche Daten BrickRock verarbeitet und auf welcher Rechtsgrundlage, finden Sie in der <a href="../">Datenschutzerklärung</a>.</p>
+
+<footer>
+  <p>BrickRock · Konto und Daten löschen · Stand 22.08.2026<br>
+  <a href="../">Zur Datenschutzerklärung</a></p>
+</footer>
+
+</div>
+</body>
+</html>

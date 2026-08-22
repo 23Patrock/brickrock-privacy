@@ -13,8 +13,14 @@ Datenschutzerklärung hinterlegt wird.
 | Datei | Zweck |
 | --- | --- |
 | `index.html` | Die Datenschutzerklärung. Vollständig eigenständig: eigenes CSS, keine externen Schriftarten, kein JavaScript, keine Cookies, keine Tracker. |
-| `.nojekyll` | Schaltet die Jekyll-Verarbeitung von GitHub Pages ab; die Datei wird unverändert ausgeliefert. |
+| `delete-account/index.html` | Anleitung zur Kontolöschung – in der App und per E-Mail ohne installierte App. Von Google Play als öffentliche Webressource verlangt. |
+| `.nojekyll` | Schaltet die Jekyll-Verarbeitung von GitHub Pages ab; die Dateien werden unverändert ausgeliefert. |
 | `README.md` | Diese Datei. |
+
+Beide Seiten sind für die Google Play Console vorgesehen:
+
+- Datenschutzerklärung → https://23patrock.github.io/brickrock-privacy/
+- Kontolöschung → https://23patrock.github.io/brickrock-privacy/delete-account/
 
 ## Bewusst nicht enthalten
 
@@ -26,5 +32,5 @@ Teile des Anwendungscodes.
 ## Änderungen
 
 Wird die Datenschutzerklärung angepasst, ist das Datum unter „Stand“ in
-`index.html` mitzuführen – an zwei Stellen: im Kopf der Seite und in der
+beiden Seiten mitzuführen – jeweils im Kopf und in der
 Fusszeile.
