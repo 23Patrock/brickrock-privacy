@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – BrickRock</title>
+<meta name="description" content="Privacy policy for the BrickRock mobile app.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --ink: #16181e;
+    --ink-2: #3a4150;
+    --muted: #5f6675;
+    --line: #dcdfe6;
+    --line-soft: #e8eaf0;
+    --accent: #5b32d6;
+    --accent-soft: #ede8fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0e13;
+      --surface: #14171f;
+      --ink: #e7eaf1;
+      --ink-2: #c3c9d5;
+      --muted: #8a91a0;
+      --line: #272c38;
+      --line-soft: #1e222c;
+      --accent: #a68cff;
+      --accent-soft: #221b3d;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .page { max-width: 760px; margin: 0 auto; }
+
+  header {
+    padding: 56px 0 28px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+
+  .stand {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .lang {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 10px 0 0;
+  }
+  .lang a { color: var(--accent); }
+
+  h2 {
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 44px 0 12px;
+    padding-top: 8px;
+  }
+
+  h3 {
+    font-size: 17px;
+    margin: 26px 0 8px;
+  }
+
+  p, ul, ol { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 28px 0 8px;
+  }
+  .toc h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 4px; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 18px 0 22px;
+  }
+  .callout p { margin: 0 0 6px; }
+  .callout p:last-child { margin: 0; font-size: 15.5px; color: var(--ink-2); }
+  .callout a { font-size: 17px; }
+
+  address {
+    font-style: normal;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    line-height: 1.6;
+  }
+
+  .scroll { overflow-x: auto; margin: 16px 0 20px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 460px;
+    font-size: 15.5px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 2px solid var(--ink);
+    color: var(--muted);
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="eyebrow">BrickRock</p>
+  <h1>Privacy Policy</h1>
+  <p class="stand">Last updated: 5 September 2026</p>
+  <p class="lang"><a href="../" hreflang="de" lang="de">Deutsche Fassung</a></p>
+</header>
+
+<p>This privacy policy explains which personal data is processed when you use the mobile app <strong>BrickRock</strong> (Android and iOS), for what purpose, and on what legal basis.</p>
+
+<p>BrickRock is an arcade game. It needs <strong>no</strong> access to your location, contacts, camera, microphone, health data or financial services, and it never asks for those permissions. It does not, however, run entirely without processing data: saved progress, leaderboards, abuse prevention, advertising and purchases all require technical and account-related data. The sections below set out exactly what that involves.</p>
+
+<div class="callout">
+  <p><strong>Want to delete your account?</strong></p>
+  <p>You can do this in the app, or without the app installed: <a href="delete-account/">Delete your account and data</a> (see also <a href="#deletion">section 15</a>).</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#controller">Controller</a></li>
+    <li><a href="#general">How we process your data</a></li>
+    <li><a href="#account">Account and authentication</a></li>
+    <li><a href="#gamedata">Game and profile data</a></li>
+    <li><a href="#leaderboards">Leaderboards and the public display name</a></li>
+    <li><a href="#friends">Friends list and friend code</a></li>
+    <li><a href="#push">Notifications (push)</a></li>
+    <li><a href="#firebase">Firebase and Google Cloud</a></li>
+    <li><a href="#appcheck">App Check, Play Integrity and DeviceCheck</a></li>
+    <li><a href="#ads">Advertising (Google AdMob, rewarded ads)</a></li>
+    <li><a href="#consent">Consent management (Google UMP)</a></li>
+    <li><a href="#purchases">Purchases through Google Play and Apple</a></li>
+    <li><a href="#security">Security and server logs</a></li>
+    <li><a href="#retention">How long data is kept</a></li>
+    <li><a href="#deletion">Deleting your account</a></li>
+    <li><a href="#recipients">Recipients and third-party providers</a></li>
+    <li><a href="#transfers">Transfers to countries outside the EU</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#children">Target audience and children</a></li>
+    <li><a href="#changes">Changes to this privacy policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<h2 id="controller">1. Controller</h2>
+
+<p>The controller responsible for data processing within the meaning of the General Data Protection Regulation (GDPR) is:</p>
+
+<address>
+  Patrick Gaida<br>
+  Bundesallee 66<br>
+  12161 Berlin<br>
+  Germany
+</address>
+
+<p>Email: <a href="mailto:23patrock@googlemail.com">23patrock@googlemail.com</a></p>
+
+<h2 id="general">2. How we process your data</h2>
+
+<p>Personal data is processed only where this is necessary to provide the app and its features, or where you have given your consent.</p>
+
+<p>The legal bases are:</p>
+<ul>
+  <li><strong>Art. 6(1)(b) GDPR</strong> (performance of a contract) for your account, saved progress, leaderboards and the handling of purchases.</li>
+  <li><strong>Art. 6(1)(f) GDPR</strong> (legitimate interests) for operational security, protection against abuse and manipulation, and error analysis. The legitimate interest is keeping the game working and the leaderboards fair.</li>
+  <li><strong>Art. 6(1)(a) GDPR</strong> (consent) for personalised advertising, where you have given it through the consent dialog, and for notifications, where you have switched them on in the app.</li>
+</ul>
+
+<p>You can withdraw consent at any time with effect for the future (see section 11).</p>
+
+<h2 id="account">3. Account and authentication</h2>
+
+<p>BrickRock uses <strong>Firebase Authentication</strong> (Google). When you first launch the app, an <strong>anonymous account</strong> is created automatically. This produces a random technical identifier (the Firebase UID). The UID is not linked to a name or an email address; it exists purely to attach your saved progress to the right device or account.</p>
+
+<p>You may optionally link your account to a <strong>Google account</strong> or use <strong>Sign in with Apple</strong> so that your progress survives across devices. Only then is account data from that provider processed — typically a user identifier and an email address, depending on the provider and your settings. With Sign in with Apple you can limit the sharing of your email address (“Hide My Email”).</p>
+
+<p>The data processed here is:</p>
+<ul>
+  <li>the Firebase UID,</li>
+  <li>whether the account is linked, and to which provider,</li>
+  <li>the account data supplied by that provider (identifier, and an email address where applicable),</li>
+  <li>sign-in timestamps.</li>
+</ul>
+
+<p>Linking an account is not required in order to play.</p>
+
+<h2 id="gamedata">4. Game and profile data</h2>
+
+<p>The following data is stored on servers in connection with your account:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Display name (chosen by you)</td><td>how you appear in leaderboards and in the game</td></tr>
+    <tr><td>In-game currency (“coins”)</td><td>the game’s economy</td></tr>
+    <tr><td>Best scores and rounds reached</td><td>personal progress and leaderboards</td></tr>
+    <tr><td>Cosmetic items owned and equipped</td><td>your collection and in-game appearance</td></tr>
+    <tr><td>Supporter entitlement</td><td>unlocking purchased content</td></tr>
+    <tr><td>Identifiers of completed rounds</td><td>preventing rewards from being credited twice</td></tr>
+    <tr><td>Identifiers of purchases and ad rewards</td><td>proof of purchase and prevention of repeat redemption</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The same information is also cached locally on your device so that the app remains usable without an internet connection. Finished rounds that could not yet be uploaded stay on the device until they have been transmitted successfully.</p>
+
+<p>A note on display names: they are checked server-side for permitted characters, length and prohibited content. They do not have to be unique — several players can use the same display name. Please avoid a name that identifies you, unless that is what you want; see the following section.</p>
+
+<h2 id="leaderboards">5. Leaderboards and the public display name</h2>
+
+<p>BrickRock runs public leaderboards (daily, weekly, monthly and all-time). Visible there to every other player are:</p>
+<ul>
+  <li>your display name,</li>
+  <li>the score and round you reached,</li>
+  <li>your rank.</li>
+</ul>
+
+<p>Your Firebase UID, your email address, your coin balance and your purchases are <strong>not</strong> visible to other users. Because the display name is yours to choose, you decide how much it reveals about you.</p>
+
+<h2 id="friends">6. Friends list and friend code</h2>
+
+<p>BrickRock includes an optional friends feature. It is <strong>available only with a permanent account</strong> (see section 3); it cannot be used with an anonymous account. If you do not use it, none of the data described in this section is created for you.</p>
+
+<p>So that you can connect with others without handing out email addresses or phone numbers, every participating account is given a <strong>friend code</strong> in the format “BRK-XXXXXX”. You decide who you give it to. BrickRock does <strong>not</strong> read your contacts or address book to find anyone.</p>
+
+<p>The data processed here is:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Your friend code and its link to your account</td><td>letting people you gave the code to find your account</td></tr>
+    <tr><td>Pending friend requests (sender and recipient)</td><td>showing and answering requests</td></tr>
+    <tr><td>Your friend connections</td><td>friends list and friends leaderboard</td></tr>
+    <tr><td>Daily count of codes entered</td><td>protection against bulk guessing of other people’s codes</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Within an existing friendship, the other person can see your <strong>display name</strong> and your <strong>score and position</strong> in the friends leaderboard. Your email address, your Firebase UID, your coin balance and your purchases are <strong>not</strong> visible.</p>
+
+<p>You can end a friendship at any time in the app. Both directions of the connection are removed, including the entry in the other person’s list.</p>
+
+<p>The legal basis is Art. 6(1)(b) GDPR: the processing serves a feature you actively asked for. The daily counter guarding against code guessing rests on Art. 6(1)(f) GDPR (legitimate interest in preventing abuse).</p>
+
+<h2 id="push">7. Notifications (push)</h2>
+
+<p>BrickRock can send you notifications. This feature is <strong>optional</strong>, available only with a permanent account, and <strong>off by default</strong>: it is set up only after you have switched it on in the app and granted the system permission.</p>
+
+<p>We only send messages about events in your own corner of the game:</p>
+<ul>
+  <li>a friend request addressed to you,</li>
+  <li>someone accepting a request you sent,</li>
+  <li>a friend beating your best score (weekly, monthly or all-time),</li>
+  <li>a weekly summary of your position in the weekly ranking, sent on Fridays.</li>
+</ul>
+
+<p>You choose which of these you want, individually, in the settings. <strong>BrickRock does not send marketing notifications.</strong></p>
+
+<p>Delivery runs through <strong>Firebase Cloud Messaging (FCM)</strong>, a Google service (see section 16). This involves:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>The FCM device token, the platform (Android/iOS) and your app language</td><td>delivering to the right device in the right language</td></tr>
+    <tr><td>The link between the token and your account</td><td>making sure a device only receives messages for the account currently signed in</td></tr>
+    <tr><td>Your choice of notification types</td><td>respecting your settings when sending</td></tr>
+    <tr><td>Daily count of “beaten score” notifications sent</td><td>capping how many are sent per day</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>A device token is a technical identifier that Google assigns to the app installation on your device. It is not an advertising identifier and is never used for advertising.</p>
+
+<h3>Short-lived processing jobs</h3>
+
+<p>When someone beats your best score, a short-lived <strong>processing job</strong> is created on the server so that we can work out who needs to be notified. It holds the identifier of the account that triggered it, that account’s display name at the time of the round, and the scores involved.</p>
+
+<p>In normal operation these jobs are <strong>deleted automatically after 30 days at the latest</strong>; deletion is handled by a retention rule stored in the database, not manually. If you delete your account, the jobs created by your own rounds are <strong>deleted immediately</strong> rather than being kept until that period expires (see section 15).</p>
+
+<p>You can stop notifications at any time, either in the app’s settings or in your device’s system settings. When you switch the feature off in the app, the device token is removed from the server. A token that has become permanently unreachable is deleted at the next delivery attempt.</p>
+
+<p>The legal basis is Art. 6(1)(a) GDPR (consent, given by switching the feature on in the app and granting the system permission). You may withdraw that consent at any time with effect for the future. The daily cap rests on Art. 6(1)(f) GDPR.</p>
+
+<h2 id="firebase">8. Firebase and Google Cloud</h2>
+
+<p>The server side of BrickRock runs on Google’s Firebase platform. The services used are:</p>
+<ul>
+  <li><strong>Firebase Authentication</strong> — accounts and sign-in (section 3),</li>
+  <li><strong>Cloud Firestore</strong> — the database for profile, game and leaderboard data (section 4),</li>
+  <li><strong>Cloud Functions</strong> — server functions that evaluate rounds, maintain leaderboards, verify purchases and validate ad rewards,</li>
+  <li><strong>Firebase Cloud Messaging</strong> — delivery of notifications, if you have switched them on (section 7),</li>
+  <li><strong>Firebase App Check</strong> — protection against abusive access (section 9).</li>
+</ul>
+
+<p>The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, together with Google LLC (USA). Every connection to these services necessarily transmits your IP address as well.</p>
+
+<p>The database (Cloud Firestore) runs in a <strong>multi-region within the European Union</strong>. The server functions run mostly in a region in the <strong>United States</strong>; one function runs in a region within the European Union. See section 17 on this.</p>
+
+<p>Further information: <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy information</a> and <a href="https://policies.google.com/privacy?hl=en" rel="noopener">Google’s privacy policy</a>.</p>
+
+<h2 id="appcheck">9. App Check, Play Integrity and DeviceCheck</h2>
+
+<p>To ensure the server functions can only be called by a genuine, unmodified copy of BrickRock, the app uses <strong>Firebase App Check</strong>. It verifies the authenticity of the installation through:</p>
+<ul>
+  <li><strong>the Google Play Integrity API</strong> on Android,</li>
+  <li><strong>Apple DeviceCheck</strong> on iOS.</li>
+</ul>
+
+<p>In doing so, technical information about the app installation and the device is transmitted to Google or Apple, and a time-limited authenticity token is issued. No game content and no account data is transmitted.</p>
+
+<p>The purpose is protection against modified app versions, automated access and forged scores. The legal basis is Art. 6(1)(f) GDPR; without this protection, the leaderboards and the game’s economy could not be secured against manipulation.</p>
+
+<p>Further information: <a href="https://policies.google.com/privacy?hl=en" rel="noopener">Google</a> and <a href="https://www.apple.com/legal/privacy/en-ww/" rel="noopener">Apple</a>.</p>
+
+<h2 id="ads">10. Advertising (Google AdMob, rewarded ads)</h2>
+
+<p>BrickRock shows advertising <strong>only as optional “rewarded ads”</strong>. These never appear on their own: they start only when you explicitly choose to watch one in exchange for an in-game reward. BrickRock has no banners, no interstitials and no advertising that starts by itself.</p>
+
+<p>The provider is Google AdMob (Google Ireland Limited / Google LLC). When an ad is served, Google processes, among other things:</p>
+<ul>
+  <li>your device’s advertising ID (Android Advertising ID or Apple Identifier for Advertisers),</li>
+  <li>the IP address,</li>
+  <li>device and usage information relating to the ad,</li>
+  <li>your interactions with the ad.</li>
+</ul>
+
+<p>Whether the advertising served is <strong>personalised</strong> or <strong>non-personalised</strong> depends on your choice in the consent dialog (section 11) and on your device’s advertising-ID settings.</p>
+
+<h3>Server-side verification of the reward</h3>
+<p>So that a reward cannot be obtained by manipulation, Google reports the outcome directly to our server once an ad has been watched in full (“server-side verification”). What is transmitted is the technical identifier of the transaction and your user identifier, carrying a cryptographic signature that we verify. We do not receive the ad’s content or any advertising profiles.</p>
+
+<p>Further information: <a href="https://support.google.com/admob/answer/6128543?hl=en" rel="noopener">AdMob and privacy</a> and <a href="https://policies.google.com/technologies/partner-sites?hl=en" rel="noopener">how Google uses data from partner apps</a>.</p>
+
+<h2 id="consent">11. Consent management (Google UMP)</h2>
+
+<p>BrickRock uses Google’s <strong>User Messaging Platform (UMP)</strong> to obtain and manage your advertising consent. If you are in the European Economic Area, the United Kingdom or Switzerland, a dialog appears at launch in which you decide about personalised advertising.</p>
+
+<p>Your decision is stored on the device and applied every time an ad is served. You can change or withdraw it at any time — the app settings contain an entry point for this. You can also reset the advertising ID in your device’s system settings, or disable personalised advertising there system-wide.</p>
+
+<h2 id="purchases">12. Purchases through Google Play and Apple</h2>
+
+<p>BrickRock offers one optional in-app purchase (“Supporter”). It is handled exclusively through:</p>
+<ul>
+  <li><strong>Google Play Billing</strong> on Android,</li>
+  <li><strong>Apple In-App Purchase</strong> on iOS.</li>
+</ul>
+
+<p><strong>We do not receive payment data.</strong> Card numbers, bank details, billing addresses and similar payment information are processed solely by Google or Apple; we have no access to them.</p>
+
+<p>All that is transmitted to us and stored on our side is the technical proof of purchase (the purchase token or transaction identifier) together with your user identifier. We verify it server-side with the respective provider in order to unlock the entitlement you bought and to prevent the same purchase being redeemed more than once. The legal basis is Art. 6(1)(b) GDPR.</p>
+
+<p>Further information: <a href="https://policies.google.com/privacy?hl=en" rel="noopener">Google</a> and <a href="https://www.apple.com/legal/privacy/en-ww/" rel="noopener">Apple</a>.</p>
+
+<h2 id="security">13. Security and server logs</h2>
+
+<p>Calling the server functions produces technical log data, in particular the time of access, the function called, the result or error code, and technical connection data including the IP address. These logs serve operation, troubleshooting and the prevention of abuse.</p>
+
+<p>In addition, verification records are stored to prevent rounds, ad rewards or purchases from being credited more than once. The legal basis is Art. 6(1)(f) GDPR.</p>
+
+<p>No automated decision-making or profiling within the meaning of Art. 22 GDPR takes place.</p>
+
+<h2 id="retention">14. How long data is kept</h2>
+
+<ul>
+  <li><strong>Account, profile and game data</strong> is stored for as long as the account exists.</li>
+  <li><strong>Leaderboard entries</strong> remain visible for the duration of the relevant period, or of the all-time ranking.</li>
+  <li><strong>Proof of purchase</strong> is kept for as long as it is needed to provide the purchased entitlement and to meet statutory retention obligations.</li>
+  <li><strong>Verification records against duplicate credit</strong> are kept for as long as a risk of abuse remains.</li>
+  <li><strong>Friend connections and pending requests</strong> exist until you or the other person ends them, and at the latest until one of the accounts involved is deleted.</li>
+  <li><strong>Device tokens for notifications</strong> are stored while the feature is switched on. They are removed as soon as you switch it off, change accounts, or a token becomes permanently unreachable.</li>
+  <li><strong>Short-lived processing jobs for notifications</strong> are deleted automatically after 30 days at the latest in normal operation. If an account is deleted, they are removed immediately (sections 7 and 15).</li>
+  <li><strong>Server logs</strong> are deleted automatically after a short time in line with the platform’s own defaults.</li>
+  <li><strong>Data stored locally on the device</strong> is removed when you uninstall the app.</li>
+</ul>
+
+<h2 id="deletion">15. Deleting your account</h2>
+
+<div class="callout">
+  <p><strong>→ <a href="delete-account/">Deleting your account: instructions and request form</a></strong></p>
+  <p>That page explains step by step how to delete your account in the app — and how to request deletion if the app is no longer installed.</p>
+</div>
+
+<p>You can request deletion of your account and the associated data at any time. The app settings contain a function for deleting your account. If the app is no longer installed, an informal message to <a href="mailto:23patrock@googlemail.com?subject=BrickRock%20-%20Account%20deletion">23patrock@googlemail.com</a> is enough.</p>
+
+<p>Deletion is carried out server-side. The following is removed:</p>
+<ul>
+  <li>the account itself, along with your profile and game data (display name, coin balance, best scores, cosmetic items, Supporter entitlement),</li>
+  <li><strong>all of your leaderboard entries</strong> across every period (daily, weekly, monthly, all-time),</li>
+  <li>your friend connections — <strong>including the matching entries held by your friends</strong> — and all pending friend requests in both directions,</li>
+  <li>your device tokens for notifications and their link to your account,</li>
+  <li>the stored identifiers of completed rounds and redeemed ad rewards,</li>
+  <li>any outstanding short-lived processing jobs for notifications that arose from your own rounds (section 7).</li>
+</ul>
+
+<p>Your previous <strong>friend code</strong> is permanently retired and never issued again. All that remains is a technical block entry recording the time it was retired; the user identifier and display name are removed. For anyone who still has the code, it therefore leads nowhere.</p>
+
+<p><strong>Technical purchase and ad records</strong> are not deleted. These records are needed to provide the relevant entitlement and to prevent abuse: they stop the same purchase or the same ad reward being redeemed a second time. After your account has been deleted, they point to an identifier behind which no account and no profile exists any more. The legal basis is Art. 6(1)(f) GDPR; the legitimate interest lies in preventing the same purchase or ad reward from being redeemed repeatedly. Where statutory retention obligations additionally apply to individual proofs of purchase, retention follows Art. 6(1)(c) GDPR and the periods prescribed there.</p>
+
+<p>Entitlements you have already acquired are lost when the account is deleted. Also excluded from deletion is data we are legally required to retain, as well as payment-processing data held by Google or Apple; its deletion is governed by those providers’ own terms.</p>
+
+<p>Uninstalling the app alone does not delete the account on the server.</p>
+
+<h2 id="recipients">16. Recipients and third-party providers</h2>
+
+<p>Your data is not sold. It is passed on only to the following service providers, and only where this is necessary to operate the app:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Provider</th><th>Purpose</th><th>Privacy information</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Ireland Limited / Google LLC (Firebase, Cloud Functions, Firestore, App Check, Play Integrity)</td>
+      <td>account, data storage, server functions, abuse prevention</td>
+      <td><a href="https://policies.google.com/privacy?hl=en" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Ireland Limited / Google LLC (Firebase Cloud Messaging)</td>
+      <td>delivery of notifications, only when the feature is switched on (section 7)</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google (AdMob, UMP)</td>
+      <td>optional rewarded ads, consent management</td>
+      <td><a href="https://support.google.com/admob/answer/6128543?hl=en" rel="noopener">support.google.com/admob</a></td>
+    </tr>
+    <tr>
+      <td>Google (Google Play Billing)</td>
+      <td>payment processing on Android</td>
+      <td><a href="https://policies.google.com/privacy?hl=en" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International (in-app purchase, DeviceCheck, Sign in with Apple)</td>
+      <td>payment processing, authenticity checks, sign-in on iOS</td>
+      <td><a href="https://www.apple.com/legal/privacy/en-ww/" rel="noopener">apple.com/legal/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="transfers">17. Transfers to countries outside the EU</h2>
+
+<p>The Google and Apple services used also process data outside the European Union, in particular in the <strong>United States</strong>.</p>
+
+<p>BrickRock’s database runs in a multi-region within the European Union. The server functions run mostly in a US region; one function runs in a region within the European Union. Even where data is stored in the European Union, access by the provider from a country outside the EU cannot be ruled out, since this is a group of companies with a US parent.</p>
+
+<p>Such transfers are based on the <strong>EU-US Data Privacy Framework</strong>, where the recipient in question is certified, and additionally on the European Commission’s <strong>Standard Contractual Clauses</strong> under Art. 46(2)(c) GDPR. Despite these safeguards, access by authorities in third countries to transferred data cannot be entirely excluded.</p>
+
+<h2 id="rights">18. Your rights</h2>
+
+<p>You have the following rights against the controller:</p>
+<ul>
+  <li><strong>access</strong> to the data processed about you (Art. 15 GDPR),</li>
+  <li><strong>rectification</strong> of inaccurate data (Art. 16 GDPR),</li>
+  <li><strong>erasure</strong> (Art. 17 GDPR),</li>
+  <li><strong>restriction of processing</strong> (Art. 18 GDPR),</li>
+  <li><strong>data portability</strong> (Art. 20 GDPR),</li>
+  <li><strong>objection</strong> to processing based on legitimate interests (Art. 21 GDPR),</li>
+  <li><strong>withdrawal of consent</strong> with effect for the future (Art. 7(3) GDPR).</li>
+</ul>
+
+<p>A message to the contact address given in section 1 is enough to exercise these rights. Because anonymous accounts are not linked to an identifiable person, we will need details that allow us to identify the account in such cases — for example the user identifier shown in the app.</p>
+
+<p>You also have the right to lodge a complaint with a <strong>data protection supervisory authority</strong> (Art. 77 GDPR), in particular in the Member State where you live or work.</p>
+
+<h2 id="children">19. Target audience and children</h2>
+
+<p>BrickRock is not aimed at children and is not designed as an offering in the “Families” category on Google Play. The app does not knowingly collect data from children below the age required under national law for valid consent (in Germany, 16 years, Art. 8 GDPR).</p>
+
+<p>If you become aware that a child has created an account without their guardian’s permission, please contact the address given in section 1. The account will then be deleted.</p>
+
+<h2 id="changes">20. Changes to this privacy policy</h2>
+
+<p>This privacy policy is updated whenever the app, the services it uses, or the legal requirements change. The version published here is the one that applies. You will find the date of the most recent change at the top, under “Last updated”.</p>
+
+<h2 id="contact">21. Contact</h2>
+
+<p>For questions about data protection and to exercise your rights, you can reach the controller at:</p>
+
+<p>Patrick Gaida<br>
+Email: <a href="mailto:23patrock@googlemail.com">23patrock@googlemail.com</a></p>
+
+<p>The full postal address is given in <a href="#controller">section 1</a>.</p>
+
+<footer>
+  <p>Privacy policy for the BrickRock app · Last updated 5 September 2026</p>
+</footer>
+
+</div>
+</body>
+</html>

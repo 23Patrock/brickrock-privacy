@@ -76,6 +76,13 @@
     margin: 0;
   }
 
+  .lang {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 10px 0 0;
+  }
+  .lang a { color: var(--accent); }
+
   h2 {
     font-size: clamp(20px, 4vw, 24px);
     line-height: 1.25;
@@ -187,7 +194,8 @@
 <header>
   <p class="eyebrow">BrickRock</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="stand">Stand: 22.08.2026</p>
+  <p class="stand">Stand: 05.09.2026</p>
+  <p class="lang"><a href="en/" hreflang="en" lang="en">English version</a></p>
 </header>
 
 <p>Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten bei der Nutzung der Mobile-App <strong>BrickRock</strong> (Android und iOS) verarbeitet werden, zu welchem Zweck und auf welcher Rechtsgrundlage.</p>
@@ -196,7 +204,7 @@
 
 <div class="callout">
   <p><strong>Sie möchten Ihr Konto löschen?</strong></p>
-  <p>Das geht in der App und auch ohne installierte App: <a href="delete-account/">Konto und Daten löschen</a> (siehe auch <a href="#loeschung">Abschnitt 13</a>).</p>
+  <p>Das geht in der App und auch ohne installierte App: <a href="delete-account/">Konto und Daten löschen</a> (siehe auch <a href="#loeschung">Abschnitt 15</a>).</p>
 </div>
 
 <nav class="toc">
@@ -207,6 +215,8 @@
     <li><a href="#konto">Konto und Authentifizierung</a></li>
     <li><a href="#spieldaten">Spiel- und Profildaten</a></li>
     <li><a href="#bestenliste">Bestenlisten und Öffentlichkeit des Anzeigenamens</a></li>
+    <li><a href="#freunde">Freundesliste und Freundescode</a></li>
+    <li><a href="#push">Benachrichtigungen (Push)</a></li>
     <li><a href="#firebase">Firebase und Google Cloud</a></li>
     <li><a href="#appcheck">App Check, Play Integrity und DeviceCheck</a></li>
     <li><a href="#werbung">Werbung (Google AdMob, Rewarded Ads)</a></li>
@@ -245,10 +255,10 @@
 <ul>
   <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Vertragserfüllung) für Konto, Spielstand, Bestenlisten und die Abwicklung von Käufen.</li>
   <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse) für Betriebssicherheit, Missbrauchs- und Manipulationsschutz sowie Fehleranalyse. Das berechtigte Interesse besteht darin, das Spiel funktionsfähig und die Bestenlisten fair zu halten.</li>
-  <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) für personalisierte Werbung, soweit Sie diese über den Einwilligungsdialog erteilt haben.</li>
+  <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) für personalisierte Werbung, soweit Sie diese über den Einwilligungsdialog erteilt haben, sowie für Benachrichtigungen, soweit Sie diese in der App aktiviert haben.</li>
 </ul>
 
-<p>Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen (siehe Abschnitt 9).</p>
+<p>Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen (siehe Abschnitt 11).</p>
 
 <h2 id="konto">3. Konto und Authentifizierung</h2>
 
@@ -302,23 +312,94 @@
 
 <p>Ihre Firebase-UID, Ihre E-Mail-Adresse, Ihr Kontostand und Ihre Käufe sind für andere Nutzer <strong>nicht</strong> sichtbar. Da der Anzeigename frei wählbar ist, entscheiden Sie selbst, wie viel er über Sie preisgibt.</p>
 
-<h2 id="firebase">6. Firebase und Google Cloud</h2>
+<h2 id="freunde">6. Freundesliste und Freundescode</h2>
+
+<p>BrickRock enthält eine optionale Freundesfunktion. Sie ist <strong>permanenten Konten vorbehalten</strong> (siehe Abschnitt 3); mit einem anonymen Konto steht sie nicht zur Verfügung. Wer sie nicht nutzt, für den werden die in diesem Abschnitt genannten Daten nicht angelegt.</p>
+
+<p>Damit Sie sich mit anderen verbinden können, ohne E-Mail-Adressen oder Telefonnummern preiszugeben, erhält jedes teilnehmende Konto einen <strong>Freundescode</strong> im Format „BRK-XXXXXX“. Sie entscheiden selbst, wem Sie ihn geben. BrickRock durchsucht dafür <strong>keine</strong> Kontakte und kein Adressbuch.</p>
+
+<p>Verarbeitet werden dabei:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Daten</th><th>Zweck</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Freundescode und seine Zuordnung zu Ihrem Konto</td><td>Auffinden Ihres Kontos durch Personen, denen Sie den Code gegeben haben</td></tr>
+    <tr><td>Offene Freundschaftsanfragen (Absender und Empfänger)</td><td>Anzeige und Beantwortung von Anfragen</td></tr>
+    <tr><td>Ihre Freundschaftsverbindungen</td><td>Freundesliste und Freundes-Bestenliste</td></tr>
+    <tr><td>Tageszähler eingegebener Codes</td><td>Schutz vor massenhaftem Durchprobieren fremder Codes</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Innerhalb einer bestehenden Freundschaft sind für die andere Person Ihr <strong>Anzeigename</strong> sowie Ihre <strong>Punktzahl und Platzierung</strong> in der Freundes-Bestenliste sichtbar. Ihre E-Mail-Adresse, Ihre Firebase-UID, Ihr Kontostand und Ihre Käufe sind es <strong>nicht</strong>.</p>
+
+<p>Eine Freundschaft lässt sich jederzeit in der App beenden. Dabei werden beide Richtungen der Verbindung entfernt, also auch der Eintrag in der Liste der anderen Person.</p>
+
+<p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO: Die Verarbeitung erfolgt zur Erbringung der von Ihnen aktiv angeforderten Funktion. Der Tageszähler gegen das Durchprobieren von Codes stützt sich auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Missbrauchsschutz).</p>
+
+<h2 id="push">7. Benachrichtigungen (Push)</h2>
+
+<p>BrickRock kann Ihnen Benachrichtigungen senden. Diese Funktion ist <strong>freiwillig</strong>, permanenten Konten vorbehalten und standardmässig <strong>nicht</strong> aktiv: Sie wird erst eingerichtet, nachdem Sie sie in der App aktiviert und die Systemberechtigung erteilt haben.</p>
+
+<p>Versendet werden ausschliesslich Nachrichten zu Ereignissen aus Ihrem eigenen Spielumfeld:</p>
+<ul>
+  <li>eine Freundschaftsanfrage an Sie,</li>
+  <li>die Annahme einer von Ihnen gesendeten Anfrage,</li>
+  <li>das Überbieten Ihrer Bestleistung durch eine befreundete Person (Woche, Monat, Gesamt),</li>
+  <li>einmal wöchentlich freitags Ihre Platzierung in der Wochenrangliste.</li>
+</ul>
+
+<p>Welche dieser Arten Sie erhalten möchten, stellen Sie einzeln in den Einstellungen ein. <strong>Werbliche Benachrichtigungen versendet BrickRock nicht.</strong></p>
+
+<p>Technisch werden die Nachrichten über <strong>Firebase Cloud Messaging (FCM)</strong> zugestellt, einen Dienst von Google (siehe Abschnitt 16). Dafür wird verarbeitet:</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Daten</th><th>Zweck</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Geräte-Token von FCM, Plattform (Android/iOS) und eingestellte App-Sprache</td><td>Zustellung an das richtige Gerät in der richtigen Sprache</td></tr>
+    <tr><td>Zuordnung des Tokens zu Ihrem Konto</td><td>Sicherstellen, dass ein Gerät nur Nachrichten des aktuell angemeldeten Kontos erhält</td></tr>
+    <tr><td>Ihre Auswahl der Benachrichtigungsarten</td><td>Beachtung Ihrer Einstellungen beim Versand</td></tr>
+    <tr><td>Tageszähler versendeter Überbiet-Benachrichtigungen</td><td>Begrenzung der Anzahl pro Tag</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Ein Geräte-Token ist eine von Google vergebene technische Kennung des App-Exemplars auf Ihrem Gerät. Es ist keine Werbekennung und wird nicht für Werbung verwendet.</p>
+
+<h3>Kurzlebige Verarbeitungsaufträge</h3>
+
+<p>Wird Ihre Bestleistung überboten, entsteht serverseitig ein kurzlebiger <strong>Verarbeitungsauftrag</strong>, aus dem sich ermitteln lässt, wer zu benachrichtigen ist. Er enthält die Kennung des auslösenden Kontos, dessen Anzeigenamen zum Zeitpunkt des Laufs sowie die betroffenen Punktzahlen.</p>
+
+<p>Im laufenden Betrieb werden diese Aufträge <strong>spätestens nach 30 Tagen automatisch gelöscht</strong>; die Löschung erfolgt über eine in der Datenbank hinterlegte Aufbewahrungsregel und nicht von Hand. Löschen Sie Ihr Konto, werden die aus Ihren eigenen Spielrunden entstandenen Aufträge <strong>sofort mitgelöscht</strong> und nicht bis zum Ablauf dieser Frist aufbewahrt (Abschnitt 15).</p>
+
+<p>Sie können Benachrichtigungen jederzeit beenden, in der App über die Einstellungen oder in den Systemeinstellungen Ihres Geräts. Wird die Funktion in der App abgeschaltet, wird das Geräte-Token serverseitig entfernt. Ein Token, das dauerhaft nicht mehr erreichbar ist, wird beim nächsten Zustellversuch ebenfalls gelöscht.</p>
+
+<p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, erteilt durch das Aktivieren in der App und die Systemberechtigung). Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Die Begrenzung der Anzahl pro Tag stützt sich auf Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+<h2 id="firebase">8. Firebase und Google Cloud</h2>
 
 <p>Die Serverfunktionen von BrickRock werden mit Diensten der Google-Plattform Firebase betrieben. Eingesetzt werden:</p>
 <ul>
   <li><strong>Firebase Authentication</strong> – Konten und Anmeldung (Abschnitt 3),</li>
   <li><strong>Cloud Firestore</strong> – Datenbank für Profil-, Spiel- und Bestenlistendaten (Abschnitt 4),</li>
   <li><strong>Cloud Functions</strong> – Serverfunktionen, die Spielrunden auswerten, Bestenlisten pflegen, Käufe prüfen und Werbebelohnungen verifizieren,</li>
-  <li><strong>Firebase App Check</strong> – Schutz vor missbräuchlichen Zugriffen (Abschnitt 7).</li>
+  <li><strong>Firebase Cloud Messaging</strong> – Zustellung von Benachrichtigungen, sofern Sie sie aktiviert haben (Abschnitt 7),</li>
+  <li><strong>Firebase App Check</strong> – Schutz vor missbräuchlichen Zugriffen (Abschnitt 9).</li>
 </ul>
 
 <p>Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, gemeinsam mit Google LLC (USA). Bei jeder Verbindung zu diesen Diensten wird technisch bedingt auch Ihre IP-Adresse übertragen.</p>
 
-<p>Die Serverfunktionen und die Datenbank werden derzeit in einer Region in den <strong>Vereinigten Staaten</strong> betrieben. Siehe dazu Abschnitt 15.</p>
+<p>Die Datenbank (Cloud Firestore) wird in einer <strong>Multi-Region in der Europäischen Union</strong> betrieben. Die Serverfunktionen laufen überwiegend in einer Region in den <strong>Vereinigten Staaten</strong>; eine Funktion läuft in einer Region in der Europäischen Union. Siehe dazu Abschnitt 17.</p>
 
 <p>Weitere Informationen: <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase-Datenschutzinformationen</a> und <a href="https://policies.google.com/privacy?hl=de" rel="noopener">Datenschutzerklärung von Google</a>.</p>
 
-<h2 id="appcheck">7. App Check, Play Integrity und DeviceCheck</h2>
+<h2 id="appcheck">9. App Check, Play Integrity und DeviceCheck</h2>
 
 <p>Damit die Serverfunktionen nur von einer echten, unveränderten BrickRock-App aufgerufen werden können, setzt die App <strong>Firebase App Check</strong> ein. Dieser prüft die Echtheit der App-Installation über:</p>
 <ul>
@@ -332,7 +413,7 @@
 
 <p>Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" rel="noopener">Google</a> und <a href="https://www.apple.com/legal/privacy/de-ww/" rel="noopener">Apple</a>.</p>
 
-<h2 id="werbung">8. Werbung (Google AdMob, Rewarded Ads)</h2>
+<h2 id="werbung">10. Werbung (Google AdMob, Rewarded Ads)</h2>
 
 <p>BrickRock zeigt Werbung <strong>ausschliesslich als freiwillige „Rewarded Ads“</strong>. Diese Anzeigen erscheinen nie von selbst: Sie starten nur, wenn Sie sie ausdrücklich auswählen, um eine Belohnung im Spiel zu erhalten. Es gibt in BrickRock keine Banner, keine Interstitials und keine automatisch startende Werbung.</p>
 
@@ -344,20 +425,20 @@
   <li>Interaktionen mit der Anzeige.</li>
 </ul>
 
-<p>Ob dabei <strong>personalisierte</strong> oder <strong>nicht personalisierte</strong> Werbung ausgeliefert wird, richtet sich nach Ihrer Auswahl im Einwilligungsdialog (Abschnitt 9) sowie nach Ihren Systemeinstellungen zur Werbe-ID.</p>
+<p>Ob dabei <strong>personalisierte</strong> oder <strong>nicht personalisierte</strong> Werbung ausgeliefert wird, richtet sich nach Ihrer Auswahl im Einwilligungsdialog (Abschnitt 11) sowie nach Ihren Systemeinstellungen zur Werbe-ID.</p>
 
 <h3>Serverseitige Prüfung der Belohnung</h3>
 <p>Damit eine Belohnung nicht durch Manipulation erschlichen werden kann, meldet Google nach vollständigem Ansehen einer Anzeige das Ergebnis direkt an unseren Server („Server-Side Verification“). Übermittelt werden dabei die technische Kennung des Vorgangs und Ihre Nutzerkennung, versehen mit einer kryptografischen Signatur, die wir prüfen. Inhalte der Anzeige oder Werbeprofile erhalten wir dabei nicht.</p>
 
 <p>Weitere Informationen: <a href="https://support.google.com/admob/answer/6128543?hl=de" rel="noopener">AdMob und Datenschutz</a> sowie <a href="https://policies.google.com/technologies/partner-sites?hl=de" rel="noopener">Wie Google Daten von Partner-Apps verwendet</a>.</p>
 
-<h2 id="consent">9. Einwilligungsverwaltung (Google UMP)</h2>
+<h2 id="consent">11. Einwilligungsverwaltung (Google UMP)</h2>
 
 <p>Für die Einholung und Verwaltung Ihrer Werbe-Einwilligung setzt BrickRock die <strong>User Messaging Platform (UMP)</strong> von Google ein. Befinden Sie sich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz, wird Ihnen beim Start ein Dialog angezeigt, in dem Sie über personalisierte Werbung entscheiden.</p>
 
 <p>Ihre Entscheidung wird auf dem Gerät gespeichert und bei jeder Anzeigenauslieferung berücksichtigt. Sie können sie jederzeit ändern oder widerrufen – die Einstellungen der App enthalten dafür einen entsprechenden Zugang. Zusätzlich können Sie die Werbe-ID in den Systemeinstellungen Ihres Geräts zurücksetzen oder personalisierte Werbung dort systemweit deaktivieren.</p>
 
-<h2 id="kaeufe">10. Käufe über Google Play und Apple</h2>
+<h2 id="kaeufe">12. Käufe über Google Play und Apple</h2>
 
 <p>BrickRock bietet einen optionalen In-App-Kauf („Supporter“) an. Die Abwicklung erfolgt ausschliesslich über:</p>
 <ul>
@@ -371,7 +452,7 @@
 
 <p>Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" rel="noopener">Google</a> und <a href="https://www.apple.com/legal/privacy/de-ww/" rel="noopener">Apple</a>.</p>
 
-<h2 id="sicherheit">11. Sicherheit und Serverprotokolle</h2>
+<h2 id="sicherheit">13. Sicherheit und Serverprotokolle</h2>
 
 <p>Beim Aufruf der Serverfunktionen fallen technische Protokolldaten an, insbesondere Zeitpunkt des Zugriffs, aufgerufene Funktion, Ergebnis bzw. Fehlercode sowie technische Verbindungsdaten einschliesslich der IP-Adresse. Diese Protokolle dienen dem Betrieb, der Fehlersuche und der Abwehr von Missbrauch.</p>
 
@@ -379,18 +460,21 @@
 
 <p>Eine automatisierte Entscheidungsfindung oder ein Profiling im Sinne von Art. 22 DSGVO findet nicht statt.</p>
 
-<h2 id="speicherdauer">12. Speicherdauer</h2>
+<h2 id="speicherdauer">14. Speicherdauer</h2>
 
 <ul>
   <li><strong>Konto-, Profil- und Spieldaten</strong> werden gespeichert, solange das Konto besteht.</li>
   <li><strong>Bestenlisteneinträge</strong> bleiben für die Dauer des jeweiligen Zeitraums bzw. der Gesamtwertung sichtbar.</li>
   <li><strong>Kaufnachweise</strong> werden so lange aufbewahrt, wie es für die Bereitstellung der gekauften Berechtigung und für gesetzliche Aufbewahrungspflichten erforderlich ist.</li>
   <li><strong>Prüfmerkmale gegen Mehrfachgutschriften</strong> werden aufbewahrt, solange ein Missbrauchsrisiko besteht.</li>
+  <li><strong>Freundschaftsverbindungen und offene Anfragen</strong> bestehen, bis Sie oder die andere Person sie beenden, längstens bis zur Löschung eines der beteiligten Konten.</li>
+  <li><strong>Geräte-Token für Benachrichtigungen</strong> werden gespeichert, solange die Funktion aktiviert ist. Sie werden entfernt, sobald Sie sie abschalten, das Konto wechseln oder ein Token dauerhaft nicht mehr erreichbar ist.</li>
+  <li><strong>Kurzlebige Verarbeitungsaufträge für Benachrichtigungen</strong> werden im laufenden Betrieb spätestens nach <strong>30 Tagen</strong> automatisch gelöscht. Bei einer Kontolöschung werden sie sofort entfernt (Abschnitte 7 und 15).</li>
   <li><strong>Serverprotokolle</strong> werden nach den Vorgaben der eingesetzten Plattform nach kurzer Zeit automatisch gelöscht.</li>
   <li><strong>Lokal auf dem Gerät gespeicherte Daten</strong> werden mit der Deinstallation der App entfernt.</li>
 </ul>
 
-<h2 id="loeschung">13. Löschung des Kontos</h2>
+<h2 id="loeschung">15. Löschung des Kontos</h2>
 
 <div class="callout">
   <p><strong>→ <a href="delete-account/">Konto löschen: Anleitung und Anfrageformular</a></strong></p>
@@ -399,11 +483,25 @@
 
 <p>Sie können die Löschung Ihres Kontos und der damit verbundenen Daten jederzeit verlangen. Die App enthält dafür in den Einstellungen eine Funktion zum Löschen des Kontos. Ist die App nicht mehr installiert, genügt eine formlose Nachricht an <a href="mailto:23patrock@googlemail.com?subject=BrickRock%20-%20Kontoloeschung">23patrock@googlemail.com</a>.</p>
 
-<p>Mit der Löschung werden das Konto und die zugehörigen Profil- und Spieldaten entfernt. Bereits erworbene Berechtigungen gehen dabei verloren. Von der Löschung ausgenommen sind Daten, die wir aufgrund gesetzlicher Pflichten weiter aufbewahren müssen, sowie Kaufabwicklungsdaten, die bei Google bzw. Apple liegen.</p>
+<p>Die Löschung wird serverseitig ausgeführt. Entfernt werden dabei:</p>
+<ul>
+  <li>das Konto selbst sowie Ihre Profil- und Spieldaten (Anzeigename, Kontostand, Bestwerte, Gestaltungselemente, Supporter-Berechtigung),</li>
+  <li><strong>alle Ihre Bestenlisteneinträge</strong> in sämtlichen Zeiträumen (Tag, Woche, Monat, Gesamt),</li>
+  <li>Ihre Freundschaftsverbindungen – <strong>einschliesslich der Gegeneinträge bei Ihren Freundinnen und Freunden</strong> – sowie alle offenen Freundschaftsanfragen in beide Richtungen,</li>
+  <li>Ihre Geräte-Token für Benachrichtigungen und deren Zuordnung zu Ihrem Konto,</li>
+  <li>die gespeicherten Kennungen abgeschlossener Spielrunden und eingelöster Werbebelohnungen,</li>
+  <li>die noch offenen kurzlebigen Verarbeitungsaufträge für Benachrichtigungen, die aus Ihren eigenen Spielrunden entstanden sind (Abschnitt 7).</li>
+</ul>
+
+<p>Ihr bisheriger <strong>Freundescode</strong> wird dauerhaft stillgelegt und nicht erneut vergeben. Es bleibt lediglich ein technischer Sperreintrag mit dem Zeitpunkt der Stilllegung bestehen; Nutzerkennung und Anzeigename werden entfernt. Für jeden, der den Code noch besitzt, läuft er damit ins Leere.</p>
+
+<p>Nicht gelöscht werden <strong>technische Kauf- und Werbenachweise</strong>. Diese Datensätze sind für die Bereitstellung der jeweiligen Berechtigung und für den Missbrauchsschutz erforderlich: Sie verhindern, dass derselbe Kauf oder dieselbe Werbebelohnung ein zweites Mal eingelöst wird. Nach der Löschung Ihres Kontos verweisen sie auf eine Kennung, zu der kein Konto und kein Profil mehr existiert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse besteht darin, die mehrfache Einlösung desselben Kaufs oder derselben Werbebelohnung zu verhindern. Soweit für einzelne Kaufnachweise darüber hinaus gesetzliche Aufbewahrungspflichten bestehen, richtet sich die Aufbewahrung nach Art. 6 Abs. 1 lit. c DSGVO und nach den dort vorgesehenen Fristen.</p>
+
+<p>Bereits erworbene Berechtigungen gehen mit der Löschung verloren. Ebenfalls ausgenommen sind Daten, die aufgrund gesetzlicher Pflichten weiter aufbewahrt werden müssen, sowie Kaufabwicklungsdaten, die bei Google bzw. Apple liegen; deren Löschung richtet sich nach den Bestimmungen dieser Anbieter.</p>
 
 <p>Das Deinstallieren der App allein löscht das serverseitige Konto nicht.</p>
 
-<h2 id="empfaenger">14. Empfänger und Drittanbieter</h2>
+<h2 id="empfaenger">16. Empfänger und Drittanbieter</h2>
 
 <p>Ihre Daten werden nicht verkauft. Eine Weitergabe erfolgt nur an die folgenden Dienstleister, soweit dies für den Betrieb der App erforderlich ist:</p>
 
@@ -417,6 +515,11 @@
       <td>Google Ireland Limited / Google LLC (Firebase, Cloud Functions, Firestore, App Check, Play Integrity)</td>
       <td>Konto, Datenspeicherung, Serverfunktionen, Missbrauchsschutz</td>
       <td><a href="https://policies.google.com/privacy?hl=de" rel="noopener">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Ireland Limited / Google LLC (Firebase Cloud Messaging)</td>
+      <td>Zustellung von Benachrichtigungen, nur bei aktivierter Funktion (Abschnitt 7)</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
     </tr>
     <tr>
       <td>Google (AdMob, UMP)</td>
@@ -437,13 +540,15 @@
 </table>
 </div>
 
-<h2 id="drittland">15. Übermittlung in Drittländer</h2>
+<h2 id="drittland">17. Übermittlung in Drittländer</h2>
 
-<p>Die eingesetzten Dienste von Google und Apple verarbeiten Daten auch ausserhalb der Europäischen Union, insbesondere in den <strong>Vereinigten Staaten</strong>. Die Serverfunktionen und die Datenbank von BrickRock werden derzeit in einer US-Region betrieben.</p>
+<p>Die eingesetzten Dienste von Google und Apple verarbeiten Daten auch ausserhalb der Europäischen Union, insbesondere in den <strong>Vereinigten Staaten</strong>.</p>
+
+<p>Die Datenbank von BrickRock wird in einer Multi-Region in der Europäischen Union betrieben. Die Serverfunktionen laufen überwiegend in einer US-Region; eine Funktion läuft in einer Region in der Europäischen Union. Auch bei einem Speicherort in der Europäischen Union lässt sich ein Zugriff des Anbieters aus einem Drittland nicht ausschliessen, da es sich um einen Konzern mit US-Muttergesellschaft handelt.</p>
 
 <p>Grundlage der Übermittlung sind das <strong>EU-US Data Privacy Framework</strong>, soweit der jeweilige Empfänger zertifiziert ist, sowie ergänzend die <strong>Standardvertragsklauseln</strong> der Europäischen Kommission gemäss Art. 46 Abs. 2 lit. c DSGVO. Trotz dieser Garantien lässt sich nicht vollständig ausschliessen, dass Behörden in Drittländern auf übermittelte Daten zugreifen.</p>
 
-<h2 id="rechte">16. Ihre Rechte</h2>
+<h2 id="rechte">18. Ihre Rechte</h2>
 
 <p>Ihnen stehen gegenüber dem Verantwortlichen folgende Rechte zu:</p>
 <ul>
@@ -460,17 +565,17 @@
 
 <p>Unabhängig davon haben Sie das Recht, sich bei einer <strong>Datenschutz-Aufsichtsbehörde</strong> zu beschweren (Art. 77 DSGVO), insbesondere in dem Mitgliedstaat Ihres Aufenthaltsorts oder Ihres Arbeitsplatzes.</p>
 
-<h2 id="kinder">17. Zielgruppe und Kinder</h2>
+<h2 id="kinder">19. Zielgruppe und Kinder</h2>
 
 <p>BrickRock richtet sich nicht gezielt an Kinder und ist nicht als Angebot im Sinne der Google-Play-Kategorie „Familien“ konzipiert. Die App erhebt nicht wissentlich Daten von Kindern unter dem nach nationalem Recht massgeblichen Alter für eine wirksame Einwilligung (in Deutschland 16 Jahre, Art. 8 DSGVO).</p>
 
 <p>Sollten Sie feststellen, dass ein Kind ohne Zustimmung der Erziehungsberechtigten ein Konto angelegt hat, wenden Sie sich bitte an die in Abschnitt 1 genannte Kontaktadresse. Das Konto wird dann gelöscht.</p>
 
-<h2 id="aenderungen">18. Änderungen dieser Datenschutzerklärung</h2>
+<h2 id="aenderungen">20. Änderungen dieser Datenschutzerklärung</h2>
 
 <p>Diese Datenschutzerklärung wird angepasst, wenn sich die App, die eingesetzten Dienste oder die rechtlichen Anforderungen ändern. Massgeblich ist die jeweils an dieser Stelle veröffentlichte Fassung. Das Datum der letzten Änderung finden Sie oben unter „Stand“.</p>
 
-<h2 id="kontakt">19. Kontakt</h2>
+<h2 id="kontakt">21. Kontakt</h2>
 
 <p>Für Fragen zum Datenschutz und zur Ausübung Ihrer Rechte erreichen Sie den Verantwortlichen unter:</p>
 
@@ -480,7 +585,7 @@ E-Mail: <a href="mailto:23patrock@googlemail.com">23patrock@googlemail.com</a></
 <p>Die vollständige Anschrift finden Sie in <a href="#verantwortlicher">Abschnitt 1</a>.</p>
 
 <footer>
-  <p>Datenschutzerklärung für die App BrickRock · Stand 22.08.2026</p>
+  <p>Datenschutzerklärung für die App BrickRock · Stand 05.09.2026</p>
 </footer>
 
 </div>
