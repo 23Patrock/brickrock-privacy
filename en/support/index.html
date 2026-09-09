@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support – BrickRock</title>
+<meta name="description" content="Help and contact for the BrickRock mobile app: account, offline play, Supporter Pack, account deletion and privacy.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --ink: #16181e;
+    --ink-2: #3a4150;
+    --muted: #5f6675;
+    --line: #dcdfe6;
+    --line-soft: #e8eaf0;
+    --accent: #5b32d6;
+    --accent-soft: #ede8fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0e13;
+      --surface: #14171f;
+      --ink: #e7eaf1;
+      --ink-2: #c3c9d5;
+      --muted: #8a91a0;
+      --line: #272c38;
+      --line-soft: #1e222c;
+      --accent: #a68cff;
+      --accent-soft: #221b3d;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .page { max-width: 760px; margin: 0 auto; }
+
+  header {
+    padding: 56px 0 28px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+
+  .stand { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .lang {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 10px 0 0;
+  }
+  .lang a { color: var(--accent); }
+
+  h2 {
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 44px 0 12px;
+  }
+
+  h3 { font-size: 17px; margin: 26px 0 8px; }
+
+  p, ul, ol { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .contact {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 22px 0 26px;
+    text-align: center;
+  }
+  .contact .label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .contact .mail {
+    font-size: clamp(19px, 4.5vw, 24px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .contact .mail a { text-decoration: none; }
+  .contact .mail a:hover { text-decoration: underline; }
+  .contact .hint { margin: 0; font-size: 15px; color: var(--ink-2); }
+
+  .steps {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 24px 20px 44px;
+    margin: 16px 0 22px;
+  }
+  .steps li { margin-bottom: 10px; }
+  .steps li:last-child { margin-bottom: 0; }
+
+  .scroll { overflow-x: auto; margin: 16px 0 20px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 460px;
+    font-size: 15.5px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+
+  .warn {
+    border-left: 3px solid var(--accent);
+    padding: 2px 0 2px 18px;
+    margin: 20px 0;
+  }
+  .warn p { margin: 0; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 2px solid var(--ink);
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="eyebrow">BrickRock</p>
+  <h1>BrickRock Support</h1>
+  <p class="lang"><a href="../../support/" hreflang="de" lang="de">Deutsche Fassung</a></p>
+</header>
+
+<p>Need help with BrickRock or want to send feedback? You can find the most important support information and contact options here.</p>
+
+<h2 id="contact">1. Contact</h2>
+
+<p>For technical issues, questions about BrickRock, or general feedback, you can reach us using the contact information below.</p>
+
+<div class="contact">
+  <p class="label">Contact support</p>
+  <p class="mail"><a href="mailto:23patrock@googlemail.com?subject=BrickRock%20Support">23patrock@googlemail.com</a></p>
+  <p class="hint">Subject: “BrickRock Support”</p>
+</div>
+
+<p>Please describe the issue as clearly as possible and include your BrickRock app version and iOS version. The app version is shown at the bottom of the home screen. It also helps to say where in the app the problem occurs and whether you were online or offline at the time.</p>
+
+<h2 id="account">2. Account &amp; Online Features</h2>
+
+<p>BrickRock can be played without an account. An account is required for online features such as public leaderboards, Friends, Collection purchases, Supporter access, and cross-device persistence.</p>
+
+<p>Friends are added using Friend Codes. BrickRock does not have a global user search or chat.</p>
+
+<h2 id="offline">3. Offline Play</h2>
+
+<p>Full runs can be played without an internet connection. Completed runs are cached and synchronized when a connection becomes available again. Live leaderboards and the Collection require an internet connection.</p>
+
+<h2 id="supporter">4. Supporter Pack</h2>
+
+<p>The BrickRock Supporter Pack is a one-time in-app purchase, not a subscription. It automatically unlocks double Run Coins and the cosmetic REFRACT set. It provides no gameplay advantage.</p>
+
+<p>If you have already bought the Supporter Pack and it is not unlocked after a reinstall or on another device, use <strong>“RESTORE PURCHASES”</strong> in the Collection. Because Supporter status belongs to your account, you need to be signed in to that same account.</p>
+
+<h2 id="deletion">5. Delete Account</h2>
+
+<p>Information about deleting your BrickRock account:</p>
+
+<p><a href="../delete-account/">Delete your account and data</a></p>
+
+<h2 id="privacy">6. Privacy</h2>
+
+<p>Privacy information:</p>
+
+<p><a href="../">Privacy policy</a></p>
+
+<h2 id="provider">Provider</h2>
+
+<p>Responsible for BrickRock and for handling support requests:</p>
+
+<address style="font-style: normal; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 16px 20px; margin: 16px 0; line-height: 1.6;">
+  Patrick Gaida<br>
+  Bundesallee 66<br>
+  12161 Berlin<br>
+  Germany<br>
+  Email: <a href="mailto:23patrock@googlemail.com">23patrock@googlemail.com</a>
+</address>
+
+<footer>
+  <p>BrickRock · Support<br>
+  <a href="../">Privacy policy</a> · <a href="../delete-account/">Delete account</a> · <a href="../../support/" hreflang="de" lang="de">Deutsche Fassung</a></p>
+</footer>
+
+</div>
+</body>
+</html>
